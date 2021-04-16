@@ -9,6 +9,7 @@ export default class User {
         this.jupiterAge = 0;
         this.earthLifeExpectancy = 73;
         this.mercuryLifeExpectancy = 0;
+        this.mercuryLeftToLive = 0;
         this.venusLifeExpectancy = 0;
         this.marsLifeExpectancy = 0;
         this.jupiterLifeExpectancy = 0;
@@ -18,6 +19,8 @@ export default class User {
         this.mercuryAge = mercuryCurrentAge;
         let mercuryCurrentExpectancy = parseInt(this.earthLifeExpectancy / 0.24);
         this.mercuryLifeExpectancy = mercuryCurrentExpectancy;
+        let mercuryCompareAge = this.mercuryLifeExpectancy - this.mercuryAge;
+        this.mercuryLeftToLive = mercuryCompareAge;
 
         let venusCurrentAge = parseInt(this.currentAge / 0.62);
         this.venusAge = venusCurrentAge;
