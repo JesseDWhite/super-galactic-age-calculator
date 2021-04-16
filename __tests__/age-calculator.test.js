@@ -11,6 +11,6 @@ describe('User', () => {
         let newUser = new User("Jesse", 27, "Mercury")
         newUser.convertAge(27);
         expect(newUser.currentAge).toEqual(27);
-        expect(newUser.mercuryAge).toEqual(112.5);
+        expect(newUser.mercuryAge).toEqual(112);
     });
 });
