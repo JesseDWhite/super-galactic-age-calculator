@@ -52,7 +52,7 @@ describe('User', () => {
         newUser.convertAllAges();
         newUser.checkAgeDifference();
         expect(newUser.mercuryLifeExpectancy).toEqual(304);
-        expect(newUser.venusLeftToLive).toEqual(75);
+        expect(newUser.venusLeftToLive).toEqual(74);
         expect(newUser.marsLeftToLive).toEqual(24);
         expect(newUser.jupiterLeftToLive).toEqual(4);
     });
