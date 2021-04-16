@@ -47,21 +47,21 @@ export default class User {
             this.mercuryLeftToLive = mercuryCompareAge;
         }
         let venusCompareAge = this.venusLifeExpectancy - this.venusAge;
-        if (venusCompareAge < this.venusLifeExpectancy) {
+        if (venusCompareAge < 0) {
             this.venusLeftToLive = Math.abs(venusCompareAge)
         } else {
             this.venusLeftToLive = venusCompareAge;
         }
 
         let marsCompareAge = this.marsLifeExpectancy - this.marsAge;
-        if (marsCompareAge < this.marsLifeExpectancy) {
+        if (marsCompareAge < 0) {
             this.marsLeftToLive = Math.abs(marsCompareAge)
         } else {
             this.marsLeftToLive = marsCompareAge;
         }
 
         let jupiterCompareAge = this.jupiterLifeExpectancy - this.jupiterAge;
-        if (jupiterCompareAge < this.jupiterLifeExpectancy) {
+        if (jupiterCompareAge < 0) {
             this.jupiterLeftToLive = Math.abs(jupiterCompareAge)
         } else {
             this.jupiterLeftToLive = jupiterCompareAge;
