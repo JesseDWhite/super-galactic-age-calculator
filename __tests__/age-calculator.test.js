@@ -38,7 +38,6 @@ describe('User', () => {
         expect(newUser.venusLifeExpectancy).toEqual(117);
         expect(newUser.marsLifeExpectancy).toEqual(38);
         expect(newUser.jupiterLifeExpectancy).toEqual(6);
-        console.log(newUser);
     });
     test('it should return the difference of life expectancy compared to current age on Mercury.', () => {
         let newUser = new User("Jesse", 27, "Earth")
@@ -51,7 +50,16 @@ describe('User', () => {
         let newUser = new User("Jesse", 27, "Earth")
         newUser.convertAllAges();
         newUser.checkAgeDifference();
-        expect(newUser.mercuryLifeExpectancy).toEqual(304);
+        expect(newUser.mercuryLeftToLive).toEqual(192);
+        expect(newUser.venusLeftToLive).toEqual(74);
+        expect(newUser.marsLeftToLive).toEqual(24);
+        expect(newUser.jupiterLeftToLive).toEqual(4);
+    });
+    test('it should return how many years the user has passed the average life expectancy if they are older than the average.', () => {
+        let newUser = new User("Jesse", 80, "Earth")
+        newUser.convertAllAges();
+        newUser.checkAgeDifference();
+        expect(newUser.mercuryLeftToLive).toEqual(192);
         expect(newUser.venusLeftToLive).toEqual(74);
         expect(newUser.marsLeftToLive).toEqual(24);
         expect(newUser.jupiterLeftToLive).toEqual(4);
