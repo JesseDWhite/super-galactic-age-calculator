@@ -23,14 +23,14 @@ describe('User', () => {
         expect(newUser.jupiterAge).toEqual(2);
     });
     test('it should determine the users average life expectancy for Mercury based on their current age.', () => {
-        let newUser = new User("Jesse", 27, "Earth")
+        let newUser = new User("Jesse", 27, "Earth", 73)
         newUser.convertAllAges();
         expect(newUser.currentAge).toEqual(27);
         expect(newUser.earthLifeExpectancy).toEqual(73);
         expect(newUser.mercuryLifeExpectancy).toEqual(304);
     });
     test('it should determine the average life expectancy for all planets.', () => {
-        let newUser = new User("Jesse", 27, "Earth")
+        let newUser = new User("Jesse", 27, "Earth", 73)
         newUser.convertAllAges();
         expect(newUser.currentAge).toEqual(27);
         expect(newUser.earthLifeExpectancy).toEqual(73);
@@ -40,14 +40,14 @@ describe('User', () => {
         expect(newUser.jupiterLifeExpectancy).toEqual(6);
     });
     test('it should return the difference of life expectancy compared to current age on Mercury.', () => {
-        let newUser = new User("Jesse", 27, "Earth")
+        let newUser = new User("Jesse", 27, "Earth", 73)
         newUser.convertAllAges();
         newUser.checkAgeDifference();
         expect(newUser.mercuryLifeExpectancy).toEqual(304);
         expect(newUser.mercuryLeftToLive).toEqual(192);
     });
     test('it should return the difference of life expectancy for all planets', () => {
-        let newUser = new User("Jesse", 27, "Earth")
+        let newUser = new User("Jesse", 27, "Earth", 73)
         newUser.convertAllAges();
         newUser.checkAgeDifference();
         expect(newUser.mercuryLeftToLive).toEqual(192);
@@ -56,7 +56,7 @@ describe('User', () => {
         expect(newUser.jupiterLeftToLive).toEqual(4);
     });
     test('it should return how many years the user has passed the average life expectancy if they are older than the average.', () => {
-        let newUser = new User("Jesse", 80, "Earth")
+        let newUser = new User("Jesse", 80, "Earth", 73)
         newUser.convertAllAges();
         newUser.checkAgeDifference();
         console.log(newUser)

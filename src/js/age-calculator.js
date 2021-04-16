@@ -1,5 +1,5 @@
 export default class User {
-    constructor(name, currentAge, residentPlanet) {
+    constructor(name, currentAge, residentPlanet, earthLifeExpectancy) {
         this.name = name;
         this.currentAge = currentAge;
         this.residentPlanet = residentPlanet;
@@ -7,7 +7,7 @@ export default class User {
         this.venusAge = 0;
         this.marsAge = 0;
         this.jupiterAge = 0;
-        this.earthLifeExpectancy = 73;
+        this.earthLifeExpectancy = earthLifeExpectancy;
         this.mercuryLifeExpectancy = 0;
         this.mercuryLeftToLive = 0;
         this.venusLifeExpectancy = 0;
