@@ -1,8 +1,8 @@
 export default class User {
-    constructor(name, currentAge, residentPlanet, earthLifeExpectancy) {
+    constructor(name, currentAge, earthLifeExpectancy) {
         this.name = name;
         this.currentAge = currentAge;
-        this.residentPlanet = residentPlanet;
+        this.residentPlanet = "Earth";
         this.mercuryAge = 0;
         this.venusAge = 0;
         this.marsAge = 0;
@@ -17,7 +17,7 @@ export default class User {
         this.jupiterLifeExpectancy = 0;
         this.jupiterLeftToLive = 0;
 
-    };
+    }
     convertAllAges() {
         let mercuryCurrentAge = parseInt(this.currentAge / 0.24);
         this.mercuryAge = mercuryCurrentAge;
@@ -38,7 +38,7 @@ export default class User {
         this.jupiterAge = jupiterCurrentAge;
         let jupiterCurrentExpectancy = parseInt(this.earthLifeExpectancy / 11.86);
         this.jupiterLifeExpectancy = jupiterCurrentExpectancy;
-    };
+    }
     checkAgeDifference() {
         let mercuryCompareAge = this.mercuryLifeExpectancy - this.mercuryAge;
         if (mercuryCompareAge < 0) {
@@ -67,4 +67,4 @@ export default class User {
             this.jupiterLeftToLive = jupiterCompareAge;
         }
     }
-};
+}
