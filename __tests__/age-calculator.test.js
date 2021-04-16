@@ -7,4 +7,9 @@ describe('User', () => {
         expect(newUser.currentAge).toEqual(27);
         expect(newUser.residentPlanet).toEqual("Earth");
     });
+    test('it should return the users current age if they reside on Mercury.', () => {
+        let newUser = new User("Jesse", 27, "Mercury")
+        expect(newUser.currentAge).toEqual(27);
+        expect(newUser.convertedAge).toEqual(112);
+    });
 });

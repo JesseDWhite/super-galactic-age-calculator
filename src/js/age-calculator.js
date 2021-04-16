@@ -3,5 +3,7 @@ export default class User {
         this.name = name;
         this.currentAge = currentAge;
         this.residentPlanet = residentPlanet;
+        this.convertedAge = 0;
     }
+
 }
