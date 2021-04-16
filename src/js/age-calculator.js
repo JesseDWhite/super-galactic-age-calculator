@@ -11,6 +11,11 @@ export default class User {
     convertAge() {
         let mercury = parseInt(this.currentAge / 0.24);
         this.mercuryAge = mercury;
-
+        let venus = parseInt(this.currentAge / .62);
+        this.venusAge = venus;
+        let mars = parseInt(this.currentAge / 1.88);
+        this.marsAge = mars;
+        let jupiter = parseInt(this.currentAge / 11.86);
+        this.jupiterAge = jupiter;
     };
 };
