@@ -9,13 +9,13 @@ describe('User', () => {
     });
     test('it should return the users current age if they reside on Mercury.', () => {
         let newUser = new User("Jesse", 27, "Earth")
-        newUser.convertAge();
+        newUser.convertAllAges();
         expect(newUser.currentAge).toEqual(27);
         expect(newUser.mercuryAge).toEqual(112);
     });
     test('it should return the users age for all planets.', () => {
         let newUser = new User("Jesse", 27, "Earth")
-        newUser.convertAge();
+        newUser.convertAllAges();
         expect(newUser.currentAge).toEqual(27);
         expect(newUser.mercuryAge).toEqual(112);
         expect(newUser.venusAge).toEqual(43);
@@ -24,14 +24,14 @@ describe('User', () => {
     });
     test('it should determine the users average life expectancy for Mercury based on their current age.', () => {
         let newUser = new User("Jesse", 27, "Earth")
-        newUser.convertAge();
+        newUser.convertAllAges();
         expect(newUser.currentAge).toEqual(27);
         expect(newUser.earthLifeExpectancy).toEqual(73);
         expect(newUser.mercuryLifeExpectancy).toEqual(304);
     });
     test('it should determine the average life expectancy for all planets.', () => {
         let newUser = new User("Jesse", 27, "Earth")
-        newUser.convertAge();
+        newUser.convertAllAges();
         expect(newUser.currentAge).toEqual(27);
         expect(newUser.earthLifeExpectancy).toEqual(73);
         expect(newUser.mercuryLifeExpectancy).toEqual(304);
@@ -39,5 +39,13 @@ describe('User', () => {
         expect(newUser.marsLifeExpectancy).toEqual(38);
         expect(newUser.jupiterLifeExpectancy).toEqual(6);
         console.log(newUser);
-    })
+    });
+    test('it should return the difference of life expectancy compared to current age on Mercury.', () => {
+        let newUser = new User("Jesse", 27, "Earth")
+        newUser.convertAllAges();
+        newUser.checkAgeDifference();
+        expect(newUser.mercuryLifeExpectancy).toEqual(304);
+        expect(newUser.mercuryLeftToLive).toEqual(192);
+
+    });
 });
