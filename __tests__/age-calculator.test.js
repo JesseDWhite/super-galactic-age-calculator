@@ -60,10 +60,10 @@ describe('User', () => {
         newUser.convertAllAges();
         newUser.checkAgeDifference();
         console.log(newUser);
-        expect(newUser.mercuryLeftToLive).toEqual("Congradulations! You have made it 71 past the average life expectancy for this planet.");
-        expect(newUser.venusLeftToLive).toEqual("Congradulations! You have made it 28 past the average life expectancy for this planet.");
-        expect(newUser.marsLeftToLive).toEqual("Congradulations! You have made it 9 past the average life expectancy for this planet.");
-        expect(newUser.jupiterLeftToLive).toEqual("Congradulations! You have made it 1 past the average life expectancy for this planet.");
+        expect(newUser.mercuryLeftToLive).toEqual("Congradulations! You have made it 71 year(s) past the average life expectancy for this planet.");
+        expect(newUser.venusLeftToLive).toEqual("Congradulations! You have made it 28 year(s) past the average life expectancy for this planet.");
+        expect(newUser.marsLeftToLive).toEqual("Congradulations! You have made it 9 year(s) past the average life expectancy for this planet.");
+        expect(newUser.jupiterLeftToLive).toEqual("Congradulations! You have made it 1 year(s) past the average life expectancy for this planet.");
     });
     test('it should skip the first branch and go to the else statement if the age is under the average life expectancy', () => {
         let newUser = new User("Jesse", 27)

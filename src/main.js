@@ -2,10 +2,11 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import User from './js/age-calculator.js'
+import User from './js/age-calculator.js';
 $(document).ready(function () {
-    $('form').submit(function (event) {
+    $('#submit').click(function (event) {
         event.preventDefault();
+        $('#user-input').slideUp();
 
         const nameEntry = $('#name').val();
         const ageEntry = $('#age').val();
@@ -13,16 +14,25 @@ $(document).ready(function () {
         const newEntry = new User(nameEntry, ageEntry);
         newEntry.convertAllAges();
         newEntry.checkAgeDifference();
-        console.log(newEntry);
 
-        $('#planet-numbers').show();
-        $('#mercury').html(`<li>Age on Mercury: ${newEntry.mercuryAge}</li> <li>Average Life Expectancy: ${newEntry.mercuryLifeExpectancy}</li> <li>Years Left to Live: ${newEntry.mercuryLeftToLive}</li>`);
+        $('#planet-numbers').slideDown();
+        $('#change-info').slideDown();
+        $('#user-name').text(`Here are you numbers ${nameEntry}`);
+        $('#mercury').html(`<p>Age on Mercury: ${newEntry.mercuryAge}</p> <p>Average Life Expectancy: ${newEntry.mercuryLifeExpectancy}</p> <p>Years Left to Live: ${newEntry.mercuryLeftToLive}</p>`);
 
-        $('#venus').html(`<li>Age on Venus: ${newEntry.venusAge}</li> <li>Average Life Expectancy: ${newEntry.venusLifeExpectancy}</li> <li>Years Left to Live: ${newEntry.venusLeftToLive}</li>`);
+        $('#venus').html(`<p>Age on Venus: ${newEntry.venusAge}</p> <p>Average Life Expectancy: ${newEntry.venusLifeExpectancy}</p> <p>Years Left to Live: ${newEntry.venusLeftToLive}</p>`);
 
-        $('#mars').html(`<li>Age on Mars: ${newEntry.marsAge}</li> <li>Average Life Expectancy: ${newEntry.marsLifeExpectancy}</li> <li>Years Left to Live: ${newEntry.marsLeftToLive}</li>`);
+        $('#mars').html(`<p>Age on Mars: ${newEntry.marsAge}</p> <p>Average Life Expectancy: ${newEntry.marsLifeExpectancy}</p> <p>Years Left to Live: ${newEntry.marsLeftToLive}</p>`);
 
-        $('#jupiter').html(`<li>Age on Jupiter: ${newEntry.jupiterAge}</li> <li>Average Life Expectancy: ${newEntry.jupiterLifeExpectancy}</li> <li>Years Left to Live: ${newEntry.jupiterLeftToLive}</li>`);
-    })
+        $('#jupiter').html(`<p>Age on Jupiter: ${newEntry.jupiterAge}</p> <p>Average Life Expectancy: ${newEntry.jupiterLifeExpectancy}</p> <p>Years Left to Live: ${newEntry.jupiterLeftToLive}</p>`);
+
+        $('#change-info').click(function (event) {
+            event.preventDefault();
+
+            $('#user-input').slideDown();
+            $('#planet-numbers').slideUp();
+            $('#change-info').slideUp();
+        });
+    });
 
 });
