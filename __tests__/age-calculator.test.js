@@ -59,11 +59,11 @@ describe('User', () => {
         let newUser = new User("Jesse", 90, "Earth", 73)
         newUser.convertAllAges();
         newUser.checkAgeDifference();
-        console.log(newUser)
         expect(newUser.mercuryLeftToLive).toEqual(71);
         expect(newUser.venusLeftToLive).toEqual(28);
         expect(newUser.marsLeftToLive).toEqual(9);
         expect(newUser.jupiterLeftToLive).toEqual(1);
+        console.log(newUser)
     });
     test('it should skip the first branch and go to the else statement if the age is under the average life expectancy', () => {
         let newUser = new User("Jesse", 27, "Earth", 73)
@@ -73,6 +73,6 @@ describe('User', () => {
         expect(newUser.venusLeftToLive).toEqual(74);
         expect(newUser.marsLeftToLive).toEqual(24);
         expect(newUser.jupiterLeftToLive).toEqual(4);
-        console.log(newUser)
+        console.log(newUser);
     });
 });
