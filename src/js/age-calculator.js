@@ -3,12 +3,13 @@ export default class User {
         this.name = name;
         this.currentAge = currentAge;
         this.residentPlanet = "Earth";
-        this.convertedAge = 0;
         this.mercuryAge = 0;
         this.venusAge = 0;
         this.marsAge = 0;
         this.jupiterAge = 0;
     }
     convertAge() {
+        let mercury = this.currentAge / 0.24;
+        return this.mercuryAge = mercury;
     }
 }
