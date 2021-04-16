@@ -59,9 +59,11 @@ describe('User', () => {
         let newUser = new User("Jesse", 80, "Earth")
         newUser.convertAllAges();
         newUser.checkAgeDifference();
-        expect(newUser.mercuryLeftToLive).toEqual(192);
-        expect(newUser.venusLeftToLive).toEqual(74);
-        expect(newUser.marsLeftToLive).toEqual(24);
-        expect(newUser.jupiterLeftToLive).toEqual(4);
+        console.log(newUser)
+        expect(newUser.mercuryLeftToLive).toEqual(29);
+        expect(newUser.venusLeftToLive).toEqual(12);
+        expect(newUser.marsLeftToLive).toEqual(4);
+        expect(newUser.jupiterLeftToLive).toEqual(0);
+        console.log(newUser)
     });
 });

@@ -41,15 +41,30 @@ export default class User {
     };
     checkAgeDifference() {
         let mercuryCompareAge = this.mercuryLifeExpectancy - this.mercuryAge;
-        this.mercuryLeftToLive = mercuryCompareAge;
-
+        if (mercuryCompareAge < this.mercuryLifeExpectancy) {
+            this.mercuryLeftToLive = Math.abs(mercuryCompareAge)
+        } else {
+            this.mercuryLeftToLive = mercuryCompareAge;
+        }
         let venusCompareAge = this.venusLifeExpectancy - this.venusAge;
-        this.venusLeftToLive = venusCompareAge;
+        if (venusCompareAge < this.venusLifeExpectancy) {
+            this.venusLeftToLive = Math.abs(venusCompareAge)
+        } else {
+            this.venusLeftToLive = venusCompareAge;
+        }
 
         let marsCompareAge = this.marsLifeExpectancy - this.marsAge;
-        this.marsLeftToLive = marsCompareAge;
+        if (marsCompareAge < this.marsLifeExpectancy) {
+            this.marsLeftToLive = Math.abs(marsCompareAge)
+        } else {
+            this.marsLeftToLive = marsCompareAge;
+        }
 
         let jupiterCompareAge = this.jupiterLifeExpectancy - this.jupiterAge;
-        this.jupiterLeftToLive = jupiterCompareAge;
+        if (jupiterCompareAge < this.jupiterLifeExpectancy) {
+            this.jupiterLeftToLive = Math.abs(jupiterCompareAge)
+        } else {
+            this.jupiterLeftToLive = jupiterCompareAge;
+        }
     }
 };
