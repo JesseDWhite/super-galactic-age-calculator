@@ -12,7 +12,6 @@ describe('User', () => {
         newUser.convertAge();
         expect(newUser.currentAge).toEqual(27);
         expect(newUser.mercuryAge).toEqual(112);
-        console.log(newUser)
     });
     test('it should return the users age for all planets.', () => {
         let newUser = new User("Jesse", 27, "Earth")
@@ -22,6 +21,13 @@ describe('User', () => {
         expect(newUser.venusAge).toEqual(43);
         expect(newUser.marsAge).toEqual(14);
         expect(newUser.jupiterAge).toEqual(2);
+    });
+    test('it should determine the users average life expectancy for Mercury based on their current age.', () => {
+        let newUser = new User("Jesse", 27, "Earth")
+        newUser.convertAge();
+        expect(newUser.currentAge).toEqual(27);
+        expect(newUser.earthLifeExpectancy).toEqual(73);
+        expect(newUser.mercuryLifeExpectancy).toEqual(304);
         console.log(newUser);
-    })
+    });
 });

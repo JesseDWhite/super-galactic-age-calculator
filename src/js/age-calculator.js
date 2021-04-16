@@ -7,6 +7,11 @@ export default class User {
         this.venusAge = 0;
         this.marsAge = 0;
         this.jupiterAge = 0;
+        this.earthLifeExpectancy = 73;
+        this.mercuryLifeExpectancy = 0;
+        this.venusLifeExpectancy = 0;
+        this.marsLifeExpectancy = 0;
+        this.jupiterLifeExpectancy = 0;
     };
     convertAge() {
         let mercury = parseInt(this.currentAge / 0.24);
@@ -18,4 +23,7 @@ export default class User {
         let jupiter = parseInt(this.currentAge / 11.86);
         this.jupiterAge = jupiter;
     };
+    calculateLifeExpectancy() {
+
+    }
 };
