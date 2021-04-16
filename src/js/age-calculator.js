@@ -41,7 +41,7 @@ export default class User {
     };
     checkAgeDifference() {
         let mercuryCompareAge = this.mercuryLifeExpectancy - this.mercuryAge;
-        if (mercuryCompareAge < this.mercuryLifeExpectancy) {
+        if (mercuryCompareAge < 0) {
             this.mercuryLeftToLive = Math.abs(mercuryCompareAge)
         } else {
             this.mercuryLeftToLive = mercuryCompareAge;

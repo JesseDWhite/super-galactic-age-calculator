@@ -56,14 +56,23 @@ describe('User', () => {
         expect(newUser.jupiterLeftToLive).toEqual(4);
     });
     test('it should return how many years the user has passed the average life expectancy if they are older than the average.', () => {
-        let newUser = new User("Jesse", 80, "Earth", 73)
+        let newUser = new User("Jesse", 90, "Earth", 73)
         newUser.convertAllAges();
         newUser.checkAgeDifference();
         console.log(newUser)
-        expect(newUser.mercuryLeftToLive).toEqual(29);
-        expect(newUser.venusLeftToLive).toEqual(12);
-        expect(newUser.marsLeftToLive).toEqual(4);
-        expect(newUser.jupiterLeftToLive).toEqual(0);
+        expect(newUser.mercuryLeftToLive).toEqual(71);
+        expect(newUser.venusLeftToLive).toEqual(28);
+        expect(newUser.marsLeftToLive).toEqual(9);
+        expect(newUser.jupiterLeftToLive).toEqual(1);
+    });
+    test('it should skip the first branch and go to the else statement if the age is under the average life expectancy', () => {
+        let newUser = new User("Jesse", 27, "Earth", 73)
+        newUser.convertAllAges();
+        newUser.checkAgeDifference();
+        expect(newUser.mercuryLeftToLive).toEqual(192);
+        expect(newUser.venusLeftToLive).toEqual(74);
+        expect(newUser.marsLeftToLive).toEqual(24);
+        expect(newUser.jupiterLeftToLive).toEqual(4);
         console.log(newUser)
     });
 });
