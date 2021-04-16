@@ -46,6 +46,14 @@ describe('User', () => {
         newUser.checkAgeDifference();
         expect(newUser.mercuryLifeExpectancy).toEqual(304);
         expect(newUser.mercuryLeftToLive).toEqual(192);
-
+    });
+    test('it should return the difference of life expectancy for all planets', () => {
+        let newUser = new User("Jesse", 27, "Earth")
+        newUser.convertAllAges();
+        newUser.checkAgeDifference();
+        expect(newUser.mercuryLifeExpectancy).toEqual(304);
+        expect(newUser.venusLeftToLive).toEqual(75);
+        expect(newUser.marsLeftToLive).toEqual(24);
+        expect(newUser.jupiterLeftToLive).toEqual(4);
     });
 });
