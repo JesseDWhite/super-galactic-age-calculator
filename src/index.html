@@ -11,24 +11,44 @@
 <body>
     <div class="container">
         <h1>Super Galactic Age Calculator</h1>
+        <em>All converted ages are based on the planet Earths average life expectanct of 73 years old.</em>
         <form>
-            <div class="form-group mt-4">
+            <div class="form-group mt-4 col-6">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" id="name" class="form-control" placeholder="Enter your name">
             </div>
-            <div class="form-group mt-5">
+            <div class="form-group mt-5 col-6">
                 <label for="age" class="form-label">Current Age</label>
                 <input type="number" id="age" class="form-control min-1" placeholder="Enter your current age">
+                <button type="submit" class="btn btn-primary mt-3">Calculate Age</button>
             </div>
-            <div class="form-group mt-5">
-                <label for="life-expectancy" class="form-label">Average Life Expectancy</label>
-                <input type="number" id="life-expectancy" class="form-control" min="1" placeholder="Enter your planets average life expectancy">
-            </div>
-            <button type="submit" class="btn btn-primary mt-3 col-3">Calculate Age</button>
         </form>
-        <div class="results" id="result">
+        <section id="planet-numbers" class="col-6">
+            <h5>Mercury Numbers</h5>
+            <div class="results col-6" id="mercury">
+                <ul>
 
-        </div>
+                </ul>
+            </div>
+            <h5>Mars Numbers</h5>
+            <div class="results col-6" id="mars">
+                <ul>
+
+                </ul>
+            </div>
+            <h5>Venus Numbers</h5>
+            <div class="results col-6" id="venus">
+                <ul>
+
+                </ul>
+            </div>
+            <h5>Jupiter Numbers</h5>
+            <div class="results col-6" id="jupiter">
+                <ul>
+
+                </ul>
+            </div>
+        </section>
     </div>
 </body>
 

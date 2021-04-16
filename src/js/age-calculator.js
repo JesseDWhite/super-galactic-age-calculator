@@ -1,5 +1,5 @@
 export default class User {
-    constructor(name, currentAge, earthLifeExpectancy) {
+    constructor(name, currentAge) {
         this.name = name;
         this.currentAge = currentAge;
         this.residentPlanet = "Earth";
@@ -7,7 +7,7 @@ export default class User {
         this.venusAge = 0;
         this.marsAge = 0;
         this.jupiterAge = 0;
-        this.earthLifeExpectancy = earthLifeExpectancy;
+        this.earthLifeExpectancy = 73;
         this.mercuryLifeExpectancy = 0;
         this.mercuryLeftToLive = 0;
         this.venusLifeExpectancy = 0;
@@ -42,27 +42,27 @@ export default class User {
     checkAgeDifference() {
         let mercuryCompareAge = this.mercuryLifeExpectancy - this.mercuryAge;
         if (mercuryCompareAge < 0) {
-            this.mercuryLeftToLive = Math.abs(mercuryCompareAge)
+            this.mercuryLeftToLive = `Congradulations! You have made it ${Math.abs(mercuryCompareAge)} past the average life expectancy for this planet.`
         } else {
             this.mercuryLeftToLive = mercuryCompareAge;
         }
         let venusCompareAge = this.venusLifeExpectancy - this.venusAge;
         if (venusCompareAge < 0) {
-            this.venusLeftToLive = Math.abs(venusCompareAge)
+            this.venusLeftToLive = `Congradulations! You have made it ${Math.abs(venusCompareAge)} past the average life expectancy for this planet.`
         } else {
             this.venusLeftToLive = venusCompareAge;
         }
 
         let marsCompareAge = this.marsLifeExpectancy - this.marsAge;
         if (marsCompareAge < 0) {
-            this.marsLeftToLive = Math.abs(marsCompareAge)
+            this.marsLeftToLive = `Congradulations! You have made it ${Math.abs(marsCompareAge)} past the average life expectancy for this planet.`
         } else {
             this.marsLeftToLive = marsCompareAge;
         }
 
         let jupiterCompareAge = this.jupiterLifeExpectancy - this.jupiterAge;
         if (jupiterCompareAge < 0) {
-            this.jupiterLeftToLive = Math.abs(jupiterCompareAge)
+            this.jupiterLeftToLive = `Congradulations! You have made it ${Math.abs(jupiterCompareAge)} past the average life expectancy for this planet.`
         } else {
             this.jupiterLeftToLive = jupiterCompareAge;
         }
