@@ -25,7 +25,4 @@ export default class User {
         let jupiterCurrentAge = parseInt(this.currentAge / 11.86);
         this.jupiterAge = jupiterCurrentAge;
     };
-    calculateLifeExpectancy() {
-
-    }
 };
