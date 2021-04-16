@@ -7,9 +7,10 @@ export default class User {
         this.venusAge = 0;
         this.marsAge = 0;
         this.jupiterAge = 0;
-    }
+    };
     convertAge() {
         let mercury = parseInt(this.currentAge / 0.24);
-        return this.mercuryAge = mercury;
-    }
-}
+        this.mercuryAge = mercury;
+
+    };
+};
