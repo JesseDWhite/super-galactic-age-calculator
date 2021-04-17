@@ -1,7 +1,6 @@
 # _super-galactic-age-calculator 🌌_
 #### _An application for calculating age on different planets._
 #### By _Jesse White_
-[Leave This Planet](https://jessedwhite.github.io/super-galactic-age-calculator/)
 ## Technologies Used
 * _HTML_ 📝
 * _CSS_ 🎨
@@ -24,7 +23,6 @@ _Use this apllication to see how old you would be on other planets! Put your nam
     * _Optionally, run the commmand `npm run build` to make a bundle of the files_
     * _Finally, run the command `npm run start` to start a development server_
 5. To run tests, navigate to `my-project/` in your terminal and run the command `npm run test`
-6. If you do not want to go through Node, you can simply open the `index.html` directly in your internet browser.
 ## Known Bugs 🐛
 * _There are no known bugs._
 ## License ⚖
