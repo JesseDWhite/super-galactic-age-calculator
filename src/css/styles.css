@@ -3,9 +3,10 @@ body {
     text-align: center;
     margin-top: 20px;
     color: white;
-    background-image: url(./../../assests/img/background-image2.jpg);
+    background-image: url(./../../assests/img/background-image3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Montserrat', sans-serif;
 }
 #planet-numbers {
     display: none;
@@ -18,4 +19,7 @@ body {
 }
 #change-info{
     display: none;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
 }
