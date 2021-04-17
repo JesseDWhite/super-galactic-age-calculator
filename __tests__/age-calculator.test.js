@@ -1,20 +1,22 @@
-import User from './../src/js/age-calculator.js'
+import User from './../src/js/age-calculator.js';
 
 describe('User', () => {
+    let newUser;
+    beforeEach(() => {
+        newUser = new User("Jesse", 27);
+    });
     test('it should show the users name, age, and current planet after construction.', () => {
-        let newUser = new User("Jesse", 27)
         expect(newUser.name).toEqual("Jesse");
         expect(newUser.currentAge).toEqual(27);
         expect(newUser.residentPlanet).toEqual("Earth");
     });
     test('it should return the users current age if they reside on Mercury.', () => {
-        let newUser = new User("Jesse", 27)
         newUser.convertAllAges();
         expect(newUser.currentAge).toEqual(27);
         expect(newUser.mercuryAge).toEqual(112);
     });
     test('it should return the users age for all planets.', () => {
-        let newUser = new User("Jesse", 27)
+        let newUser = new User("Jesse", 27);
         newUser.convertAllAges();
         expect(newUser.currentAge).toEqual(27);
         expect(newUser.mercuryAge).toEqual(112);
@@ -23,14 +25,12 @@ describe('User', () => {
         expect(newUser.jupiterAge).toEqual(2);
     });
     test('it should determine the users average life expectancy for Mercury based on their current age.', () => {
-        let newUser = new User("Jesse", 27)
         newUser.convertAllAges();
         expect(newUser.currentAge).toEqual(27);
         expect(newUser.earthLifeExpectancy).toEqual(73);
         expect(newUser.mercuryLifeExpectancy).toEqual(304);
     });
     test('it should determine the average life expectancy for all planets.', () => {
-        let newUser = new User("Jesse", 27)
         newUser.convertAllAges();
         expect(newUser.currentAge).toEqual(27);
         expect(newUser.earthLifeExpectancy).toEqual(73);
@@ -40,14 +40,12 @@ describe('User', () => {
         expect(newUser.jupiterLifeExpectancy).toEqual(6);
     });
     test('it should return the difference of life expectancy compared to current age on Mercury.', () => {
-        let newUser = new User("Jesse", 27)
         newUser.convertAllAges();
         newUser.checkAgeDifference();
         expect(newUser.mercuryLifeExpectancy).toEqual(304);
         expect(newUser.mercuryLeftToLive).toEqual(192);
     });
     test('it should return the difference of life expectancy for all planets', () => {
-        let newUser = new User("Jesse", 27)
         newUser.convertAllAges();
         newUser.checkAgeDifference();
         expect(newUser.mercuryLeftToLive).toEqual(192);
@@ -59,17 +57,14 @@ describe('User', () => {
         let newUser = new User("Jesse", 90)
         newUser.convertAllAges();
         newUser.checkAgeDifference();
-        console.log(newUser);
         expect(newUser.mercuryLeftToLive).toEqual("Congradulations! You have made it 71 year(s) past the average life expectancy for this planet.");
         expect(newUser.venusLeftToLive).toEqual("Congradulations! You have made it 28 year(s) past the average life expectancy for this planet.");
         expect(newUser.marsLeftToLive).toEqual("Congradulations! You have made it 9 year(s) past the average life expectancy for this planet.");
         expect(newUser.jupiterLeftToLive).toEqual("Congradulations! You have made it 1 year(s) past the average life expectancy for this planet.");
     });
     test('it should skip the first branch and go to the else statement if the age is under the average life expectancy', () => {
-        let newUser = new User("Jesse", 27)
         newUser.convertAllAges();
         newUser.checkAgeDifference();
-        console.log(newUser);
         expect(newUser.mercuryLeftToLive).toEqual(192);
         expect(newUser.venusLeftToLive).toEqual(74);
         expect(newUser.marsLeftToLive).toEqual(24);

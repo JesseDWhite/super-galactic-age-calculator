@@ -42,27 +42,27 @@ export default class User {
     checkAgeDifference() {
         let mercuryCompareAge = this.mercuryLifeExpectancy - this.mercuryAge;
         if (mercuryCompareAge < 0) {
-            this.mercuryLeftToLive = `Congradulations! You have made it ${Math.abs(mercuryCompareAge)} year(s) past the average life expectancy for this planet.`
+            this.mercuryLeftToLive = `Congradulations! You have made it ${Math.abs(mercuryCompareAge)} year(s) past the average life expectancy for this planet.`;
         } else {
             this.mercuryLeftToLive = mercuryCompareAge;
         }
         let venusCompareAge = this.venusLifeExpectancy - this.venusAge;
         if (venusCompareAge < 0) {
-            this.venusLeftToLive = `Congradulations! You have made it ${Math.abs(venusCompareAge)} year(s) past the average life expectancy for this planet.`
+            this.venusLeftToLive = `Congradulations! You have made it ${Math.abs(venusCompareAge)} year(s) past the average life expectancy for this planet.`;
         } else {
             this.venusLeftToLive = venusCompareAge;
         }
 
         let marsCompareAge = this.marsLifeExpectancy - this.marsAge;
         if (marsCompareAge < 0) {
-            this.marsLeftToLive = `Congradulations! You have made it ${Math.abs(marsCompareAge)} year(s) past the average life expectancy for this planet.`
+            this.marsLeftToLive = `Congradulations! You have made it ${Math.abs(marsCompareAge)} year(s) past the average life expectancy for this planet.`;
         } else {
             this.marsLeftToLive = marsCompareAge;
         }
 
         let jupiterCompareAge = this.jupiterLifeExpectancy - this.jupiterAge;
         if (jupiterCompareAge < 0) {
-            this.jupiterLeftToLive = `Congradulations! You have made it ${Math.abs(jupiterCompareAge)} year(s) past the average life expectancy for this planet.`
+            this.jupiterLeftToLive = `Congradulations! You have made it ${Math.abs(jupiterCompareAge)} year(s) past the average life expectancy for this planet.`;
         } else {
             this.jupiterLeftToLive = jupiterCompareAge;
         }

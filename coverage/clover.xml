@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1618615440040" clover="3.2.0">
-  <project timestamp="1618615440041" name="All files">
+<coverage generated="1618619730195" clover="3.2.0">
+  <project timestamp="1618619730196" name="All files">
     <metrics statements="48" coveredstatements="48" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3" elements="59" coveredelements="59" complexity="0" loc="48" ncloc="48" packages="1" files="1" classes="1"/>
     <file name="age-calculator.js" path="C:\Users\jesse\OneDrive\Desktop\Epicodus\05 week-five\super-galactic-age-calculator\src\js\age-calculator.js">
       <metrics statements="48" coveredstatements="48" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
-      <line num="3" count="9" type="stmt"/>
-      <line num="4" count="9" type="stmt"/>
-      <line num="5" count="9" type="stmt"/>
-      <line num="6" count="9" type="stmt"/>
-      <line num="7" count="9" type="stmt"/>
-      <line num="8" count="9" type="stmt"/>
-      <line num="9" count="9" type="stmt"/>
-      <line num="10" count="9" type="stmt"/>
-      <line num="11" count="9" type="stmt"/>
-      <line num="12" count="9" type="stmt"/>
-      <line num="13" count="9" type="stmt"/>
-      <line num="14" count="9" type="stmt"/>
-      <line num="15" count="9" type="stmt"/>
-      <line num="16" count="9" type="stmt"/>
-      <line num="17" count="9" type="stmt"/>
-      <line num="18" count="9" type="stmt"/>
+      <line num="3" count="11" type="stmt"/>
+      <line num="4" count="11" type="stmt"/>
+      <line num="5" count="11" type="stmt"/>
+      <line num="6" count="11" type="stmt"/>
+      <line num="7" count="11" type="stmt"/>
+      <line num="8" count="11" type="stmt"/>
+      <line num="9" count="11" type="stmt"/>
+      <line num="10" count="11" type="stmt"/>
+      <line num="11" count="11" type="stmt"/>
+      <line num="12" count="11" type="stmt"/>
+      <line num="13" count="11" type="stmt"/>
+      <line num="14" count="11" type="stmt"/>
+      <line num="15" count="11" type="stmt"/>
+      <line num="16" count="11" type="stmt"/>
+      <line num="17" count="11" type="stmt"/>
+      <line num="18" count="11" type="stmt"/>
       <line num="22" count="8" type="stmt"/>
       <line num="23" count="8" type="stmt"/>
       <line num="24" count="8" type="stmt"/>
