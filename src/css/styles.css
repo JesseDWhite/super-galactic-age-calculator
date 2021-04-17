@@ -21,5 +21,13 @@ body {
     display: none;
 }
 h1 {
-    font-family: 'Montserrat', sans-serif;
+    color: rgb(168, 230, 255);
+    text-shadow: rgb(0, 183, 255) 1px 0 20px;
+}
+h5 {
+    color: rgb(255, 159, 95);
+}
+h4 {
+    color: rgb(168, 230, 255);
+    text-shadow: rgb(0, 183, 255) 1px 0 20px;
 }

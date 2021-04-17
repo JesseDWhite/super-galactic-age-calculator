@@ -17,7 +17,7 @@ $(document).ready(function () {
 
         $('#planet-numbers').slideDown();
         $('#change-info').slideDown();
-        $('#user-name').text(`Here are you numbers ${nameEntry}`);
+        $('#user-name').text(`🚀Here are you numbers ${nameEntry}`);
         $('#mercury').html(`<p>Age on Mercury: ${newEntry.mercuryAge}</p> <p>Average Life Expectancy: ${newEntry.mercuryLifeExpectancy}</p> <p>Years Left to Live: ${newEntry.mercuryLeftToLive}</p>`);
 
         $('#venus').html(`<p>Age on Venus: ${newEntry.venusAge}</p> <p>Average Life Expectancy: ${newEntry.venusLifeExpectancy}</p> <p>Years Left to Live: ${newEntry.venusLeftToLive}</p>`);

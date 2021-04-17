@@ -1,5 +1,5 @@
-# _{Application Name}_
-#### _{Brief description of application}_
+# _super-galactic-age-calculator 🌌_
+#### _An application for calculating age on different planets._
 #### By _Jesse White_
 ## Technologies Used
 * _HTML_ 📝
@@ -9,7 +9,7 @@
 * _Webpack_ 💾
 * _Bootstrap_ 🥾
 ## Description 📜
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}
+_Use this apllication to see how old you would be on other planets! Put your name and current age into the form and you will see your answer on the right side of the page. You will also see what the average life expectancy is on that planet and how you compare!_
 ### Prerequisites 💻
 * [Node](https://nodejs.org/en/)
 * A text editor like [VS Code](https://code.visualstudio.com/)
@@ -23,9 +23,9 @@ _{This is a detailed description of your application. Give as much detail as nee
     * _Optionally, run the commmand `npm run build` to make a bundle of the files_
     * _Finally, run the command `npm run start` to start a development server_
 5. To run tests, navigate to `my-project/` in your terminal and run the command `npm run test`
+6. If you do not want to go through Node, you can simply open the `index.html` directly in your internet browser.
 ## Known Bugs 🐛
-* _Any known issues_
-* _should go here_
+* _There are no known bugs._
 ## License ⚖
 _MIT © Jesse White 2021_
 ## Contact Information 🤳
