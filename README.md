@@ -1,6 +1,7 @@
 # _super-galactic-age-calculator 🌌_
 #### _An application for calculating age on different planets._
 #### By _Jesse White_
+[Leave This Planet](https://jessedwhite.github.io/super-galactic-age-calculator/)
 ## Technologies Used
 * _HTML_ 📝
 * _CSS_ 🎨
